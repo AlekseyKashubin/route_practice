@@ -12,7 +12,7 @@ const Say = () => {
     return (
         <div style={{ color: color, backgroundColor: backgroundColor }}>
 
-            {isNaN(word) ? "the word is : " + word : "the number is : " + word}
+            <h1>{isNaN(word) ? "the word is : " + word : "the number is : " + word}</h1>
 
         </div>
     )
