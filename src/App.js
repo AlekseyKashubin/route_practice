@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Say from './components/Say';
+
+import { useState } from 'react';
+
+import { Route, Routes, Link, useNavigate } from 'react-router-dom';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h1>ROUTING PRACTICE</h1>
+    <hr/>
+
+
+
+      <Routes>
+        <Route path='/home' element={<h1>Welcome</h1>} ></Route>
+        <Route path='/:word' element={<Say/>}></Route>
+        <Route path='/:word/:color/:backgroundColor' element={<Say/>} ></Route>
+        
+
+
+
+      </Routes>
+
+
+
     </div>
   );
 }
